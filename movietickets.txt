@@ -1,0 +1,523 @@
+#include<windows.h>
+#include<mmsystem.h>
+#include<fstream>
+#include<iostream>
+using namespace std;
+
+class ticket
+{
+  public:
+    static int count1;
+    static int count2;
+    static int serial1;
+    static int serial2;
+    static int count3;
+    static int serial3;
+    static int count4;
+    static int serial4;
+    static int count5;
+    static int serial5;
+    static int count6;
+    static int serial6;
+    static int count7;
+    static int serial7;
+    static int count8;
+    static int serial8;
+    static int count9;
+    static int serial9;
+
+
+     int no_of_tickets;
+     int cost;
+      ticket()
+        {
+            cost=150;
+        }
+    friend void gettick1(ticket t);
+    friend void gettick2(ticket t);
+    friend void gettick3(ticket t);
+    friend void gettick4(ticket t);
+    friend void gettick5(ticket t);
+    friend void gettick6(ticket t);
+    friend void gettick7(ticket t);
+    friend void gettick8(ticket t);
+    friend void gettick9(ticket t);
+  };
+  int i;
+
+  int ticket::count1=0;
+  int ticket::serial1=1000;
+  int ticket::count2=0;
+  int ticket::serial2=2000;
+  int ticket::count3=0;
+  int ticket::serial3=3000;
+  int ticket::count4=0;
+  int ticket::serial4=4000;
+  int ticket::count5=0;
+  int ticket::serial5=5000;
+  int ticket::count6=0;
+  int ticket::serial6=6000;
+  int ticket::count7=0;
+  int ticket::serial7=7000;
+  int ticket::count8=0;
+  int ticket::serial8=8000;
+   int ticket::count9=0;
+  int ticket::serial9=9000;
+
+  void gettick1(ticket t)
+  {  fstream outfile;
+    if(ticket::count1==0&&ticket::serial1==1000) { outfile.open("kabalii.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("kabalii.txt",ios::in);
+
+  infile>>ticket::count1>>ticket::serial1;
+  infile.close();
+  int x=ticket::count1; int sum=0;
+      int y;
+     if(ticket::count1<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count1<<endl;
+         cout<<"Enter no of tickets :"<<endl;
+          PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count1++;
+            ticket::serial1++;
+
+           cout<<"Serial no :"<<endl<<ticket::serial1<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count1<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+         PlaySound(TEXT("bill.wav"),NULL,SND_SYNC);
+     }
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC);  }
+  outfile.open("kabalii.txt",ios::out);
+  outfile<<ticket::count1<<endl<<ticket::serial1;
+  outfile.close();
+  }
+  void gettick2(ticket t)
+  {  fstream outfile;
+    if(ticket::count2==0&&ticket::serial2==2000) { outfile.open("bahubalii.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("bahubalii.txt",ios::in);
+
+  infile>>ticket::count2>>ticket::serial2;
+  infile.close();
+  int x=ticket::count2; int sum=0;
+      int y;
+     if(ticket::count2<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count2<<endl;
+         cout<<"Enter no of tickets :"<<endl;
+         PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count2++;
+            ticket::serial2++;
+
+            cout<<"Serial no :"<<endl<<ticket::serial2<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count2<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+     PlaySound(TEXT("bill.wav"),NULL,SND_SYNC);}
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC); }
+  outfile.open("bahubalii.txt",ios::out);
+  outfile<<ticket::count2<<endl<<ticket::serial2;
+  outfile.close();
+  }
+  void gettick3(ticket t)
+  {  fstream outfile;
+    if(ticket::count3==0&&ticket::serial3==3000) { outfile.open("robo.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("robo.txt",ios::in);
+
+  infile>>ticket::count3>>ticket::serial3;
+  infile.close();
+  int x=ticket::count3; int sum=0;
+      int y;
+     if(ticket::count3<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count3<<endl;
+         PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cout<<"Enter no of tickets :"<<endl;
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count3++;
+            ticket::serial3++;
+
+           cout<<"Serial no :"<<endl<<ticket::serial1<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count3<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+     PlaySound(TEXT("bill.wav"),NULL,SND_SYNC);}
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC);  }
+  outfile.open("robo.txt",ios::out);
+  outfile<<ticket::count3<<endl<<ticket::serial3;
+  outfile.close();
+  }
+  void gettick4(ticket t)
+  {  fstream outfile;
+    if(ticket::count4==0&&ticket::serial4==4000) { outfile.open("katamarayudu.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("katamarayudu.txt",ios::in);
+
+  infile>>ticket::count4>>ticket::serial4;
+  infile.close();
+  int x=ticket::count4; int sum=0;
+      int y;
+     if(ticket::count4<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count4<<endl;
+         cout<<"Enter no of tickets :"<<endl;
+         PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count4++;
+            ticket::serial4++;
+
+           cout<<"Serial no :"<<endl<<ticket::serial4<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count4<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+      PlaySound(TEXT("bill.wav"),NULL,SND_SYNC);}
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC); }
+  outfile.open("katamarayudu.txt",ios::out);
+  outfile<<ticket::count4<<endl<<ticket::serial4;
+  outfile.close();
+  }
+ void gettick5(ticket t)
+  {  fstream outfile;
+    if(ticket::count5==0&&ticket::serial5==5000) { outfile.open("veeram.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("veeram.txt",ios::in);
+
+  infile>>ticket::count5>>ticket::serial5;
+  infile.close();
+  int x=ticket::count5; int sum=0;
+      int y;
+     if(ticket::count5<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count5<<endl;
+         cout<<"Enter no of tickets :"<<endl;
+         PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count5++;
+            ticket::serial5++;
+
+           cout<<"Serial no :"<<endl<<ticket::serial5<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count5<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost is :"<<endl<<sum<<endl;
+      PlaySound(TEXT("bill.wav"),NULL,SND_SYNC);}
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC);  }
+  outfile.open("veeram.txt",ios::out);
+  outfile<<ticket::count5<<endl<<ticket::serial5;
+  outfile.close();
+  }
+ void gettick6(ticket t)
+  {  fstream outfile;
+    if(ticket::count6==0&&ticket::serial6==6000) { outfile.open("dhruva.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("dhruva.txt",ios::in);
+
+  infile>>ticket::count6>>ticket::serial6;
+  infile.close();
+  int x=ticket::count6; int sum=0;
+      int y;
+     if(ticket::count6<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count6<<endl;
+         cout<<"Enter no of tickets :"<<endl;
+         PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count6++;
+            ticket::serial6++;
+
+           cout<<"Serial no :"<<endl<<ticket::serial6<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count6<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+      PlaySound(TEXT("bill.wav"),NULL,SND_SYNC);}
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC);  }
+  outfile.open("dhruva.txt",ios::out);
+  outfile<<ticket::count6<<endl<<ticket::serial6;
+  outfile.close();
+  }
+  void gettick7(ticket t)
+  {  fstream outfile;
+    if(ticket::count7==0&&ticket::serial7==7000) { outfile.open("avengers.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("avengers.txt",ios::in);
+   infile>>ticket::count7>>ticket::serial7;
+  infile.close();
+  int x=ticket::count7; int sum=0;
+      int y;
+     if(ticket::count7<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count7<<endl;
+         cout<<"Enter no of tickets :"<<endl;
+         PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count7++;
+            ticket::serial7++;
+
+           cout<<"Serial no :"<<endl<<ticket::serial7<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count7<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+     PlaySound(TEXT("bill.wav"),NULL,SND_SYNC); }
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC);  }
+  outfile.open("avengers.txt",ios::out);
+  outfile<<ticket::count7<<endl<<ticket::serial7;
+  outfile.close();
+  }
+   void gettick8(ticket t)
+  {  fstream outfile;
+    if(ticket::count8==0&&ticket::serial8==8000) { outfile.open("avatar.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("avatar.txt",ios::in);
+   infile>>ticket::count8>>ticket::serial8;
+  infile.close();
+  int x=ticket::count8; int sum=0;
+      int y;
+     if(ticket::count8<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count8<<endl;
+         cout<<"Enter no of tickets :"<<endl;
+         PlaySound(TEXT("ticket availability.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count8++;
+            ticket::serial8++;
+
+        cout<<"Serial no :"<<endl<<ticket::serial8<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count8<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+     PlaySound(TEXT("bill.wav"),NULL,SND_SYNC); }
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC); }
+  outfile.open("avatar.txt",ios::out);
+  outfile<<ticket::count8<<endl<<ticket::serial8;
+  outfile.close();
+  }
+  void gettick9(ticket t)
+  {  fstream outfile;
+    if(ticket::count9==0&&ticket::serial9==9000) { outfile.open("logan3D.txt",ios::app);
+  outfile.close();}
+   fstream infile;
+   infile.open("logan3D.txt",ios::in);
+   infile>>ticket::count9>>ticket::serial9;
+  infile.close();
+  int x=ticket::count9; int sum=0;
+      int y;
+     if(ticket::count9<150)
+     {   cout<<"Available tickets :"<<endl<<150-ticket::count9<<endl;
+         cout<<"\tFOR 3D MOVIES\nNormal ticket cost:\t"<<t.cost<<endl<<"Glasses cost:\t\t30"<<endl<<"Total each ticket cost:\t"<<t.cost+30<<endl;
+         int glass;
+         cout<<"Enter 1 for (3D)\nEnter 2 for (2D)\n";
+         PlaySound(TEXT("3dcost.wav"),NULL,SND_SYNC);
+         cin>>glass;
+         switch(glass)
+         {
+            case 1:
+                   t.cost=t.cost+30;
+                   break;
+            case 2:
+                   break;
+            default: cout<<"invalid\n";
+         }
+         cout<<"Enter no of tickets :"<<endl;
+         PlaySound(TEXT("3d book.wav"),NULL,SND_SYNC);
+         cin>>t.no_of_tickets;
+         y=t.no_of_tickets;
+         cout<<"\t\t\tBILL"<<endl;
+         for(i=x;i<(x+y);i++)
+         {  ticket::count9++;
+            ticket::serial9++;
+
+        cout<<"Serial no :"<<endl<<ticket::serial9<<endl;
+        cout<<"Seat no :"<<endl;
+        cout<<ticket::count9<<endl;
+        cout<<"Cost :"<<endl;
+        cout<<t.cost<<endl;
+              sum=sum+t.cost;
+
+         }
+         cout<<"Total cost :"<<endl<<sum<<endl;
+     PlaySound(TEXT("bill.wav"),NULL,SND_SYNC); }
+     else{  cout<<"SORRY Tickets are over"<<endl;
+     PlaySound(TEXT("over.wav"),NULL,SND_SYNC);  }
+  outfile.open("logan3D.txt",ios::out);
+  outfile<<ticket::count9<<endl<<ticket::serial9;
+  outfile.close();
+  }
+
+
+  int main()
+  {
+      ticket t; char ch; int key;
+     do{ labell:
+          cout<<"\t\tWELCOME TO VASAVI MULTIPLEX(**9 SCREENS WITH DOLBY ATMOS**)\nCOST OF EACH TICKET : 150\nENTER 1 TO BOOK TICKETS\n";
+      PlaySound(TEXT("project c++.wav"),NULL,SND_SYNC);
+      cin>>key;
+      int input;
+     label: cout<<"\t\t\tPLEASE SELECT ANY LANGUAGE\nEnter 1 for TAMIL \nEnter 2 for TELUGU \nEnter 3 for ENGLISH\nEnter 4 to go back\n"<<endl;
+     PlaySound(TEXT("language.wav"),NULL,SND_SYNC);
+      cin>>input;
+      switch(input)
+      {
+          case 1: int movie1;
+                   cout<<"\t\t\tPLEASE SELECT MOVIE\nEnter 1 for KABALI\nenter 2 for ROBO2\nenter 3 for VEERAM\nenter 4 to go back\nEnter 5 to go to main menu"<<endl;
+                    PlaySound(TEXT("tamil movies.wav"),NULL,SND_SYNC);
+                    cin>>movie1;
+                   switch(movie1)
+                    {  case 1:
+                        cout<<"\tSCREEN : 1\n";
+                         PlaySound(TEXT("screen 1.wav"),NULL,SND_SYNC);
+                        gettick1(t);
+                        break;
+                        case 2:
+                        cout<<"\tSCREEN : 3\n";
+                         PlaySound(TEXT("scr 3.wav"),NULL,SND_SYNC);
+                        gettick3(t);
+                        break;
+                        case 3:
+                        cout<<"\tSCREEN : 5\n";
+                         PlaySound(TEXT("scr 5.wav"),NULL,SND_SYNC);
+                        gettick5(t);
+                        break;
+                        case 4: goto label;
+                        case 5: goto labell;
+                    default: cout<<"invalid \n";
+                    }
+                  break;
+          case 2: int movie2;
+                   cout<<"\t\t\tPLEASE SELECT MOVIE\nEnter 1 for BAHUBALI2\nEnter 2 for KATAMARAYUDU\nEnter 3 for DHRUVA\nEnter 4 to go back\nEnter 5 to go to main menu"<<endl;
+                    PlaySound(TEXT("telugu movies.wav"),NULL,SND_SYNC);
+                    cin>>movie2;
+                   switch(movie2)
+                    {  case 1:
+                        cout<<"\tSCREEN : 2\n";
+                         PlaySound(TEXT("scr 2.wav"),NULL,SND_SYNC);
+                        gettick2(t);
+                        break;
+                        case 2:
+                        cout<<"\tSCREEN : 4\n";
+                         PlaySound(TEXT("scr 4.wav"),NULL,SND_SYNC);
+                        gettick4(t);
+                        break;
+                        case 3:
+                        cout<<"\tSCREEN : 6\n";
+                         PlaySound(TEXT("scr 6.wav"),NULL,SND_SYNC);
+                        gettick6(t);
+                        break;
+                        case 4: goto label;
+                        case 5: goto labell;
+                        default: cout<<"invalid \n";
+                        }
+                         break;
+          case 3: int movie3;
+                   cout<<"\t\t\tPLEASE SELECT MOVIE\nEnter 1 for AVENGERS\nEnter 2 for AVATAR\nEnter 3 for LOGAN(3D)\nEnter 4 to go back\nEnter 5 to go to main menu"<<endl;
+                    PlaySound(TEXT("english.wav"),NULL,SND_SYNC);
+                    cin>>movie3;
+                   switch(movie3)
+                    {  case 1:
+                        cout<<"\tSCREEN : 7\n";
+                         PlaySound(TEXT("scr 7.wav"),NULL,SND_SYNC);
+                        gettick7(t);
+                        break;
+                        case 2:
+                        cout<<"\tSCREEN : 8\n";
+                         PlaySound(TEXT("scr 8.wav"),NULL,SND_SYNC);
+                        gettick8(t);
+                        break;
+                        case 3:
+                        cout<<"\tSCREEN : 9\n";
+                         PlaySound(TEXT("scr 9.wav"),NULL,SND_SYNC);
+                        gettick9(t);
+                        break;
+                        case 4: goto label;
+                        case 5: goto labell;
+                        default: cout<<"invalid \n";
+                    }
+
+                  break;
+         case 4: goto labell;
+
+         default: cout<<"invalid \n";
+      }
+      cout<<"ENTER 'y' TO BOOK OTHER TICKETS\n";
+      cin>>ch;
+    }while(ch=='y');
+    cout<<"\t\t***THANK YOU FOR VISITING OUR MULTIPLEX***\n\t\tHOPE YOU SATISFIED BY OUR SERVICE"<<endl;
+    PlaySound(TEXT("salutation.wav"),NULL,SND_SYNC);
+
+      return 0;
+  }
